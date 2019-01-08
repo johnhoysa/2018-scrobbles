@@ -24,9 +24,7 @@ function showAlbums(jsonObj) {
   //console.log(albumInfo.album[0].name);
   for (var i = 0; i < albumInfo.album.length; i++) {
     var myPara1 = document.createElement("p");
-
     myPara1.textContent = "Album Name: " + albumInfo.album[i].name;
-
     header.appendChild(myPara1);
   }
 }

@@ -1,6 +1,6 @@
 # Project Starter Kit
 
-This is a work in progress so items may not work. Use at own risk.
+Messing with json and figuring out what coding style I like best.
 
 ---
 
