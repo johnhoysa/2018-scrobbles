@@ -2,6 +2,8 @@
 
 Messing with json and figuring out what coding style I like best.
 
+Up Next if image not defined use place holder image or hide image element.
+
 ---
 
 This repository contains the CSS, Images, Fonts and Javascript for [https://www.project-name.com](https://www.project-name.com).

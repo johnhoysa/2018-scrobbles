@@ -21,10 +21,22 @@ request.onload = function() {
 function showAlbums(jsonObj) {
   let albumInfo = jsonObj["topalbums"];
   //console.log(albumInfo);
-  //console.log(albumInfo.album[0].name);
+  //console.log(albumInfo.album[3].image[]);
+
   for (var i = 0; i < albumInfo.album.length; i++) {
-    var myPara1 = document.createElement("p");
-    myPara1.textContent = "Album Name: " + albumInfo.album[i].name;
-    header.appendChild(myPara1);
+    displayAlbums.innerHTML += `
+      <div class='album'>
+        <img src="${
+          albumInfo.album[i].image[1]["#text"]
+        }" alt="cover art for" width="" height ="">
+        <p>Album Name: ${albumInfo.album[i].name}</p>
+      </div>
+      `;
+
+    console.log(albumInfo.album[i].image[1]["#text"]);
   }
+
+  // var myPara1 = document.createElement("p");
+  // myPara1.textContent = "Album Name: " + albumInfo.album[i].name;
+  // header.appendChild(myPara1);
 }
