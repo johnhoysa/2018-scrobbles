@@ -27,13 +27,14 @@ function showAlbums(jsonObj) {
     displayAlbums.innerHTML += `
       <div class='album'>
         <img src="${
-          albumInfo.album[i].image[1]["#text"]
+          albumInfo.album[i].image[3]["#text"]
         }" alt="cover art for" width="" height ="">
         <p>Album Name: ${albumInfo.album[i].name}</p>
+        <p>artist Name: ${albumInfo.album[i].artist.name}</p>
       </div>
       `;
 
-    console.log(albumInfo.album[i].image[1]["#text"]);
+    console.log(albumInfo.album[i].image[2]["#text"]);
   }
 
   // var myPara1 = document.createElement("p");
