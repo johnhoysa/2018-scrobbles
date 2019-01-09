@@ -3,7 +3,7 @@ var section = document.querySelector("section");
 
 //Create variable for json data
 const requestUrl =
-  "http://ws.audioscrobbler.com/2.0/?method=user.gettopalbums&user=jhoysa&api_key=2415395c4acbe6c072c34ed1ccb9f676&format=json&limit=5";
+  "http://ws.audioscrobbler.com/2.0/?method=user.gettopalbums&user=jhoysa&api_key=2415395c4acbe6c072c34ed1ccb9f676&format=json&limit=50";
 
 var request = new XMLHttpRequest();
 request.open("GET", requestUrl);
@@ -24,11 +24,24 @@ function showAlbums(jsonObj) {
   //console.log(albumInfo.album[3].image[]);
 
   for (var i = 0; i < albumInfo.album.length; i++) {
+    if (albumInfo.album[i].image[3]["#text"] != undefined) {
+      imageSource = albumInfo.album[i].image[3]["#text"];
+    } else {
+      imageSource = "me-need-link";
+    }
+    console.log(imageSource);
+
+    // if (albumInfo.album[i].image[3]["#text"] != undefined) {
+    //   imageSource = albumInfo.album[i].image[3]["#text"];
+    // } else {
+    //   imageSource = "me-need-link";
+    // }
+
     displayAlbums.innerHTML += `
       <div class='album'>
-        <img src="${
-          albumInfo.album[i].image[3]["#text"]
-        }" alt="cover art for" width="" height ="">
+        
+        <img src="${imageSource}" alt="cover art for" width="" height ="">
+
         <p>Album Name: ${albumInfo.album[i].name}</p>
         <p>artist Name: ${albumInfo.album[i].artist.name}</p>
       </div>
