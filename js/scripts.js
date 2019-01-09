@@ -24,18 +24,11 @@ function showAlbums(jsonObj) {
   //console.log(albumInfo.album[3].image[]);
 
   for (var i = 0; i < albumInfo.album.length; i++) {
-    if (albumInfo.album[i].image[3]["#text"] != undefined) {
-      imageSource = albumInfo.album[i].image[3]["#text"];
+    if (albumInfo.album[i].image[3]["#text"] == "") {
+      imageSource = "https://fillmurray.com/300/300";
     } else {
-      imageSource = "me-need-link";
+      imageSource = albumInfo.album[i].image[3]["#text"];
     }
-    console.log(imageSource);
-
-    // if (albumInfo.album[i].image[3]["#text"] != undefined) {
-    //   imageSource = albumInfo.album[i].image[3]["#text"];
-    // } else {
-    //   imageSource = "me-need-link";
-    // }
 
     displayAlbums.innerHTML += `
       <div class='album'>
