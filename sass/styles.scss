@@ -1,9 +1,18 @@
 @import "third-party/reset";
 
+.container {
+  max-width: 1990px;
+  padding: 0 16px;
+}
 .display-albums {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-gap: 32px;
+
+  &__heading {
+    font-size: 24px;
+    grid-column: span 12;
+  }
 
   &__album {
     grid-column: span 3;
