@@ -32,6 +32,6 @@ function showAlbums(jsonObj) {
       </div>
       `;
 
-    console.log(albumInfo.album[i].image[2]["#text"]);
+    //console.log(albumInfo.album[i].image[2]["#text"]);
   }
 }
