@@ -1,0 +1,16 @@
+.display-albums {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-gap: 32px;
+
+  &__album {
+    border: 1px solid #ccc;
+    grid-column: span 3;
+  }
+
+  &__img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+}

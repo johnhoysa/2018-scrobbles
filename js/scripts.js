@@ -1,6 +1,3 @@
-var header = document.querySelector("header");
-var section = document.querySelector("section");
-
 //Create variable for json data
 const requestTopAlbumsURL =
   "http://ws.audioscrobbler.com/2.0/?method=user.gettopalbums&user=jhoysa&api_key=2415395c4acbe6c072c34ed1ccb9f676&format=json&limit=50";
@@ -28,8 +25,8 @@ function showAlbums(jsonObj) {
     }
 
     displayAlbums.innerHTML += `
-      <div class='album'>
-        <img src="${imageSource}" alt="cover art for" width="" height ="">
+      <div class='display-albums__album'>
+        <img class="display-albums__img" src="${imageSource}" alt="cover art for" width="" height ="">
         <p>Album Name: ${albumInfo.album[i].name}</p>
         <p>artist Name: ${albumInfo.album[i].artist.name}</p>
       </div>
