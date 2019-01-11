@@ -5,6 +5,7 @@
 // album
 // name
 // artist.name
+// artist.image["#text"]
 
 //Create variable for json data
 const jsonAlbums =
