@@ -1,23 +1,23 @@
 //Create variable for json data
 const requestTopAlbumsURL =
-  "http://ws.audioscrobbler.com/2.0/?method=user.gettopalbums&user=jhoysa&api_key=2415395c4acbe6c072c34ed1ccb9f676&format=json&limit=50";
+  "http://ws.audioscrobbler.com/2.0/?method=user.gettopalbums&user=jhoysa&api_key=2415395c4acbe6c072c34ed1ccb9f676&format=json&limit=5";
 
-var requestTopAlbums = new XMLHttpRequest();
+const requestTopAlbums = new XMLHttpRequest();
 requestTopAlbums.open("GET", requestTopAlbumsURL);
 requestTopAlbums.responseType = "text";
 requestTopAlbums.send();
 
 requestTopAlbums.onload = function() {
-  var myAlbumsText = requestTopAlbums.response;
-  var myAlbums = JSON.parse(myAlbumsText);
+  const myAlbumsText = requestTopAlbums.response;
+  const myAlbums = JSON.parse(myAlbumsText);
 
   showAlbums(myAlbums);
 };
 
 function showAlbums(jsonObj) {
-  let albumInfo = jsonObj["topalbums"];
+  const albumInfo = jsonObj["topalbums"];
 
-  for (var i = 0; i < albumInfo.album.length; i++) {
+  for (let i = 0; i < albumInfo.album.length; i++) {
     if (albumInfo.album[i].image[3]["#text"] == "") {
       imageSource = "https://fillmurray.com/300/300";
     } else {
@@ -31,6 +31,6 @@ function showAlbums(jsonObj) {
         <p>artist Name: ${albumInfo.album[i].artist.name}</p>
       </div>
       `;
-    //console.log(albumInfo.album[i].image[2]["#text"]);
+    console.log(albumInfo.album[i].image[2]["#text"]);
   }
 }
