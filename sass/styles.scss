@@ -1,32 +1,35 @@
 @import "third-party/reset";
 
-@font-face {
-  font-family: "mosk-light";
-  src: url("/assets/fonts/mosk-light-300.ttf") format("truetype"); /* Safari, Android, iOS */
-}
+// Colors
+$dark: #1f2424;
+$highlight: #a3abbd;
+$white: #fafaf0;
 
-@font-face {
-  font-family: "mosk-regular";
-  src: url("/assets/fonts/mosk-normal-400.ttf") format("truetype"); /* Safari, Android, iOS */
-}
+// Type
+$font-stack: "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
 
-@font-face {
-  font-family: "mosk-medium";
-  src: url("/assets/fonts/mosk-medium-500.ttf") format("truetype"); /* Safari, Android, iOS */
+@mixin fontStyle($size: 18px, $weight: 400, $color: $dark, $font: $font-stack) {
+  font-family: $font;
+  font-weight: $weight;
+  color: $color;
+  font-size: $size;
 }
 
 .container {
   max-width: 1990px;
   padding: 0 16px;
+  background-color: $white;
 }
+
 .display-albums {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-gap: 32px;
 
   &__heading {
-    font-family: "mosk-medium", Helvetica, sans-serif;
-    font-size: 24px;
+    @include fontStyle(60px, 700);
+
+    //font-size: 40px;
     grid-column: span 12;
   }
 
@@ -39,18 +42,5 @@
     width: 100%;
     height: auto;
     display: block;
-  }
-
-  p {
-    font-family: "mosk-light", Helvetica, sans-serif;
-    font-size: 14px;
-    margin-bottom: 8px;
-    padding: 0 2px;
-  }
-
-  p:first-of-type {
-    font-family: "mosk-regular", Helvetica, sans-serif;
-    font-size: 14px;
-    margin-top: 8px;
   }
 }
