@@ -1,8 +1,6 @@
 # Project Starter Kit
 
-Messing with json and figuring out what coding style I like best.
-
-Up Next if image not defined use place holder image or hide image element.
+Figured it was time to figure this out with plain old JS.
 
 ---
 
