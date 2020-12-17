@@ -31,6 +31,5 @@ function showAlbums(jsonObj) {
         <p>artist Name: ${albumInfo.album[i].artist.name}</p>
       </div>
       `;
-    console.log(albumInfo.album[i].image[2]["#text"]);
   }
 }
