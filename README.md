@@ -1,10 +1,8 @@
 # Project Starter Kit
 
-Figured it was time to figure this out with plain old JS.
+Just a quick test that I need to expand upon in 2021.
 
 ---
-
-This repository contains the CSS, Images, Fonts and Javascript for [https://www.project-name.com](https://www.project-name.com).
 
 ### Install:
 
