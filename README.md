@@ -1,12 +1,14 @@
 # Project Starter Kit
 
+<<<<<<< Updated upstream
 Messing with json and figuring out what coding style I like best.
 
 Up Next if image not defined use place holder image or hide image element.
+=======
+A proof of concept project to help me along my JS path.
+>>>>>>> Stashed changes
 
 ---
-
-This repository contains the CSS, Images, Fonts and Javascript for [https://www.project-name.com](https://www.project-name.com).
 
 ### Install:
 
@@ -45,16 +47,3 @@ Build all html files:
 Watch & Build all html files:
 
 `npm run watch-templates`
-
-### Using Mustache
-
-Please see Mustache [Documentation](https://github.com/janl/mustache.js)
-Mustache templates in this repo are set up to use YAML front matter as well as JSON.
-
-### Front Matter
-
-Front matter is ...
-
-TO DO:
-Provide documentation on how to use YAML and JSON.
-Talk about creating a componenet library
