@@ -1,5 +1,5 @@
 {
-  "name": "Last FM Project",
+  "name": "project-css",
   "version": "1.0.0",
   "description": "",
   "browsersList": [
@@ -7,9 +7,15 @@
   ],
   "devDependencies": {
     "autoprefixer": "^9.0.2",
+    "chalk": "^2.4.1",
+    "cheerio": "^1.0.0-rc.2",
     "css-loader": "1.0.0",
     "glob": "^7.1.3",
     "gray-matter": "^4.0.1",
+    "http-server": "^0.12.3",
+    "mkdirp": "^0.5.1",
+    "mockserver": "^2.0.0",
+    "mustache": "^2.3.1",
     "node-fetch": "^2.2.0",
     "node-sass": "^5.0.0",
     "nodemon": "^1.18.3",
